@@ -1,0 +1,14 @@
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1.5rem;
+  color: #555;
+}

@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  background: #111;
+  z-index: 1;
+}
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+.nav a:hover {
+  background: rgba(255, 204, 0, 0.15);
+  color: #ffcc00;
+}
+.active {
+  background: rgba(255, 204, 0, 0.1);
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.nav a:focus-visible {
+  outline: 2px solid #ffcc00;
+  outline-offset: 2px;
+}
