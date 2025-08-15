@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
 import styles from "./HomePage.module.css";
 import { fetchTrendingMovies } from "../../services/tmdb";
+import MovieList from "../../components/MovieList/MovieList";
 
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
@@ -22,15 +21,7 @@ export default function HomePage() {
   return (
     <main className={styles.container}>
       <h1 className={styles.title}>Trending Movies</h1>
-      <ul className={styles.movieList}>
-        {movies.map((movie) => (
-          <li key={movie.id} className={styles.movieCard}>
-            <Link to={`/movies/${movie.id}`} className={styles.movieTitle}>
-              {movie.title || movie.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <MovieList movies={movies} />
     </main>
   );
 }

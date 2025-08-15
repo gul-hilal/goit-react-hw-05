@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Navigation from "./components/Navigation/Navigation.jsx";
 
@@ -11,7 +11,7 @@ const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage.jsx"))
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navigation />
       <Suspense fallback={<div style={{ padding: 16 }}>Loading…</div>}>
         <Routes>
@@ -24,6 +24,6 @@ export default function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </>
   );
 }
